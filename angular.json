@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "qrcode-reader"
+  "defaultProject": "qrcode-reader",
+  "cli": {
+    "analytics": "c259b274-438c-432c-8d6e-9422b7c5f98f"
+  }
 }
