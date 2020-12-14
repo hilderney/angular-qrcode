@@ -9,18 +9,18 @@ export class RxQrcodeComponent implements OnInit {
 
   title = "angularx-qrcode-sample-app";
 
-  qrdata = 'asd';
+  qrdata: string;
   elementType: 'img' | 'url' | 'canvas' | 'svg';
   level: 'L' | 'M' | 'Q' | 'H';
   scale: number;
   width: number;
 
   constructor() {
-    this.elementType = 'img';
-    this.level = 'M';
-    this.qrdata = 'Initial QR code data string';
-    this.scale = 1;
-    this.width = 256;
+    this.elementType = 'img'; // 'canvas', 'svg', 'img', 'url'
+    this.level = 'M'; // Nível de Correção
+    this.qrdata = 'Initial QR code data string'; // String do Qr Code
+    this.scale = 1; // 1 pixel por quadrado preto
+    this.width = 256; // Qualquer Valor, vai gerar um quadrado
   }
 
   ngOnInit() {
@@ -39,7 +39,7 @@ export class RxQrcodeComponent implements OnInit {
   }
 
   changeCustomQrdata(newValue: any): void {
-    this.qrdata = newValue;
+    this.qrdata = newValue.target.value;
   }
 
   changeScale(newValue: number): void {
